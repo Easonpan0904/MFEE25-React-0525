@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import product from './data/products.json';
 
 function App() {
+  // console.log(product);
+  let productInfo = product.map((product) => {
+    return (
+      <tr key={product.id}>
+        <td>{product.name}</td>
+        <td>{product.price}</td>
+      </tr>
+    );
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className="container">
+        <table className="table table-bordered table-striped">
+          <thead>
+            <tr>
+              <th>名稱</th>
+              <th>價格</th>
+            </tr>
+          </thead>
+          <tbody>{productInfo}</tbody>
+        </table>
+      </div>
+    </>
   );
 }
 
