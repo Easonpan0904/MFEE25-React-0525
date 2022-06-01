@@ -1,29 +1,14 @@
-import product from './data/products.json';
+// import Parent from './ex0530-3/Parent';
+// import Homework3 from './ex0530-4/Homework3';
+// import OrderPage from './ex0601-2/OrderPage';
+// import Controlled from './ex0601-3/Controlled';
+
+import MultipleInput from './ex0601-4/MultipleInput';
 
 function App() {
-  // console.log(product);
-  let productInfo = product.map((product) => {
-    return (
-      <tr key={product.id}>
-        <td>{product.name}</td>
-        <td>{product.price}</td>
-      </tr>
-    );
-  });
-
   return (
     <>
-      <div className="container">
-        <table className="table table-bordered table-striped">
-          <thead>
-            <tr>
-              <th>名稱</th>
-              <th>價格</th>
-            </tr>
-          </thead>
-          <tbody>{productInfo}</tbody>
-        </table>
-      </div>
+      <MultipleInput></MultipleInput>
     </>
   );
 }
